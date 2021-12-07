@@ -16,6 +16,6 @@ export class AppService {
 
   tryMethod(){
     console.log('Coucou depuis le service');
-    return this.http.get('https://jsonplaceholder.typicode.com/users');
+    return this.http.get('http://localhost:8080/crusties');
   }
 }
