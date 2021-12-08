@@ -8,12 +8,16 @@ import { HeaderComponent } from './header/header.component';
 import { FormPizzaComponent } from './form-pizza/form-pizza.component';
 import { HomeComponent } from './home/home.component';
 
+import { ContactComponent } from './contact/contact.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FormPizzaComponent,
-    HomeComponent
+    HomeComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
