@@ -6,7 +6,7 @@ import {HttpClient, HttpRequest} from "@angular/common/http";
 })
 export class AppService {
 
-  private crustArray : any[] = [];
+  //private crustArray : any[] = [];
 
   //private appUrl: string
 
@@ -18,4 +18,5 @@ export class AppService {
     console.log('Coucou depuis le service');
     return this.http.get('http://localhost:8080/crusties');
   }
+
 }

@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import { AppService } from "./shared/services/app.service";
+import {Crust} from "./shared/models/crust";
+import {CrustService} from "./shared/services/crust.service";
 
 @Component({
   selector: 'app-root',
@@ -10,7 +12,10 @@ export class AppComponent implements OnInit{
   title = 'ENIPizzaFront';
 
   constructor(private appService : AppService) {
+  }
 
+  ngOnInit(): void {
+    console.log('onInit');
   }
 
   testMethod() {
@@ -24,10 +29,6 @@ export class AppComponent implements OnInit{
         console.error(error);
       }
     );
-  }
-
-  ngOnInit(): void {
-    console.log('onInit');
   }
 
 }

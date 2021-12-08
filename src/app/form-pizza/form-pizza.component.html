@@ -1,0 +1,38 @@
+<!--<p>form-pizza works!</p>-->
+<h2>Votre pizza</h2>
+<form>
+  <div>
+    <label for="pizza-name">Nom de la Pizza : </label>
+    <input type="text" formControlName="pizza-name" id="pizza-name" name="pizza-name">
+  </div>
+  <div>
+    <label for="crust-selection">Type de pâte :</label>
+    <select name="crusts" id="crust-selection">
+      <option value="">-- Liste des pâtes --</option>
+      <option *ngFor="let crust of crustArray" [value]="crust.id">
+        {{crust.name}}
+      </option>
+    </select>
+    <label for="sauce-selection">Type de base :</label>
+    <select name="sauces" id="sauce-selection">
+      <option value="">-- Liste des bases --</option>
+      <option *ngFor="let sauce of sauceArray" [value]="sauce.id">
+        {{sauce.name}}
+      </option>
+    </select>
+  </div>
+  <div>
+    <label for="topping-selection">Ingredients :</label>
+    <select name="toppings" id="topping-selection" multiple>
+      <option *ngFor="let topping of toppingArray" [value]="topping.id">
+        {{topping.name}} ({{topping.category}})
+      </option>
+    </select>
+  </div>
+  <div>
+    <button>Calcul du prix</button>
+    <button>Valider la commande</button>
+  </div>
+
+
+</form>
