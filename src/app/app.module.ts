@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import {HttpClientModule} from "@angular/common/http";
 import { HeaderComponent } from './header/header.component';
 import { FormPizzaComponent } from './form-pizza/form-pizza.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FormPizzaComponent
+    FormPizzaComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
