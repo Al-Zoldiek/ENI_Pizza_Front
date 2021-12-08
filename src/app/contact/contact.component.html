@@ -1,26 +1,26 @@
 <h2>Contact</h2>
 
 <article>
-<form action="">
+<form>
 <p>Nous contacter</p>
   <div>
     <table>
       <tr>
-        <td><input type="text" placeholder="Nom*"></td>
-        <td><input type="text" placeholder="Prénom*"></td>
+        <td><input type="text" placeholder="Nom*" required></td>
+        <td><input type="text" placeholder="Prénom*" required></td>
       </tr>
       <tr>
-        <th><input type="email" placeholder="email*"></th>
-        <th><input type="text" placeholder="téléphone"></th>
+        <th><input type="email" placeholder="Email*" required></th>
+        <th><input type="text" placeholder="Téléphone*" required></th>
         <th></th>
       </tr>
     </table>
 
-    <p><textarea placeholder="Message*"></textarea></p>
+    <p><textarea placeholder="Message*" required></textarea></p>
 
   <div>
       <label for="check-non-robot">Je ne suis pas un robot</label>
-      <input type="checkbox" id="check-non-robot">
+      <input type="checkbox" id="check-non-robot" required>
   </div>
 
     <input type="submit" value="Annuler">
