@@ -10,7 +10,6 @@ export class AppComponent implements OnInit{
   title = 'ENIPizzaFront';
 
   constructor(private appService : AppService) {
-
   }
 
   testMethod() {
