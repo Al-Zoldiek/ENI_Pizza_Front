@@ -1,20 +1,20 @@
 <!--<p>form-pizza works!</p>-->
 <h2>Votre pizza</h2>
-<form>
+<form [formGroup]="createPizzaForm">
   <div>
-    <label for="pizza-name">Nom de la Pizza : </label>
-    <input type="text" formControlName="pizza-name" id="pizza-name" name="pizza-name">
+    <label for="name">Nom de la pizza : </label>
+    <input type="text" formControlName="name" id="name" name="name">
   </div>
   <div>
     <label for="crust-selection">Type de pâte :</label>
-    <select name="crusts" id="crust-selection">
+    <select name="crust" id="crust-selection">
       <option value="">-- Liste des pâtes --</option>
       <option *ngFor="let crust of crustArray" [value]="crust.id">
         {{crust.name}}
       </option>
     </select>
     <label for="sauce-selection">Type de base :</label>
-    <select name="sauces" id="sauce-selection">
+    <select name="sauce" id="sauce-selection">
       <option value="">-- Liste des bases --</option>
       <option *ngFor="let sauce of sauceArray" [value]="sauce.id">
         {{sauce.name}}

@@ -5,7 +5,7 @@ import {SauceService} from "../shared/services/sauce.service";
 import {ToppingService} from "../shared/services/topping.service";
 import {Sauce} from "../shared/models/sauce";
 import {Topping} from "../shared/models/topping";
-import {FormGroup} from "@angular/forms";
+import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-form-pizza',
@@ -13,7 +13,7 @@ import {FormGroup} from "@angular/forms";
   styleUrls: ['./form-pizza.component.scss']
 })
 export class FormPizzaComponent implements OnInit {
-  //createPizzaForm: FormGroup;
+  createPizzaForm: FormGroup;
 
   public crustArray : Crust[] = [];
   public sauceArray : Sauce[] = [];
@@ -22,7 +22,12 @@ export class FormPizzaComponent implements OnInit {
   constructor(
     private crustService : CrustService,
     private sauceService : SauceService,
-    private toppingService : ToppingService) { }
+    private toppingService : ToppingService,
+    private formBuilder: FormBuilder ) {
+    this.createPizzaForm = this.formBuilder.group({
+      name: ['(nom de la pizza)', Validators.required]
+    });
+  }
 
   ngOnInit(): void {
     this.getAllCrusts();
@@ -70,6 +75,10 @@ export class FormPizzaComponent implements OnInit {
         console.error(error);
       }
     );
+  }
+
+  resetForm() {
+    this.createPizzaForm.reset();
   }
 
 
