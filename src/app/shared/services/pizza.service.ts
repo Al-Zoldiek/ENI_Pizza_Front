@@ -5,6 +5,7 @@ import {Pizza} from "../models/pizza";
 @Injectable({
   providedIn: 'root'
 })
+
 export class PizzaService {
 
   constructor(private http: HttpClient) { }

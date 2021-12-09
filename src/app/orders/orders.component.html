@@ -1,1 +1,7 @@
-<p>orders works!</p>
+<div id="divOrder" *ngFor="let order of orders">
+  <p>Votre commande n°{{order.id}} du </p><!--{{order.date | date:'short'}}-->
+  <ul>
+      <li>Statut :{{order.status}} </li>
+      <li>Pizzas commandées: {{order.pizzasList}}</li>
+  </ul>
+</div>
