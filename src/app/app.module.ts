@@ -8,13 +8,15 @@ import { HeaderComponent } from './header/header.component';
 import { FormPizzaComponent } from './form-pizza/form-pizza.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { PizzasListComponent } from './pizzas-list/pizzas-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FormPizzaComponent,
-    HomeComponent
+    HomeComponent,
+    PizzasListComponent
   ],
   imports: [
     BrowserModule,
