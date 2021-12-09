@@ -16,6 +16,7 @@ import {Pizza} from "../shared/models/pizza";
 })
 export class FormPizzaComponent implements OnInit {
   createPizzaForm: FormGroup;
+  price: number = 0;
 
   public crustArray : Crust[] = [];
   public sauceArray : Sauce[] = [];
@@ -87,6 +88,23 @@ export class FormPizzaComponent implements OnInit {
     this.createPizzaForm.reset();
   }
 
+  calculatePrice() {
+    console.log("> FormPizza component : calculatePrice()");
+    if (this.createPizzaForm.controls['sauce'].value.name === "Crème") {
+      this.price += 6;
+    } else if (this.createPizzaForm.controls['sauce'].value.name === "Tomate") {
+      this.price += 56;
+    }
+    let size = this.createPizzaForm.controls['toppings'].value.length;
+    if (size > 3) {
+      this.price += size*1;
+    } else {
+      this.price += 3;
+    }
+    console.log("Prix : " + this.price);
+    return this.price;
+  }
+
   validatePizza() {
     console.log("> FormPizza component : validatePizza() [" + this.createPizzaForm.controls['name'].value + "]");
     let createdPizza = new Pizza(
@@ -99,4 +117,5 @@ export class FormPizzaComponent implements OnInit {
     this.pizzaService.addPizza(createdPizza).subscribe();
     this.createPizzaForm.reset();
   }
+
 }
