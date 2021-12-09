@@ -1,6 +1,6 @@
-import { Injectable } from '@angular/core';
+import {Component, Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {Order} from "../models/order";
+//import { DatePipe } from '@angular/common'
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +8,9 @@ import {Order} from "../models/order";
 
 export class OrderService {
 
-  constructor(private http: HttpClient) {
+  public dateOrder: Date = new Date();
+  constructor(private http: HttpClient) {//, private datePipe: DatePipe) {
+    //this.date = this.datePipe.transform(this.date, 'dd/MM/yyyy');
   }
 
   getOrders(){

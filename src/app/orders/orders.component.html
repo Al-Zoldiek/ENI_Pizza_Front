@@ -1,7 +1,8 @@
 <div id="divOrder" *ngFor="let order of orders">
-  <p>Votre commande n°{{order.id}} du </p><!--{{order.date | date:'short'}}-->
-  <ul>
-      <li>Statut :{{order.status}} </li>
-      <li>Pizzas commandées: {{order.pizzasList}}</li>
-  </ul>
+  <p>Votre commande n°{{order.id}} du {{order.date}}</p>
+  <p>Statut :{{order.status}}</p>
+  <p>Pizzas commandées:</p>
+  <!--<ul>
+      <li *ngFor="let pizza of pizzasList">{{pizza.name}}</li>
+  </ul>-->
 </div>
