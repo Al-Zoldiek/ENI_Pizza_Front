@@ -6,6 +6,8 @@ import {ToppingService} from "../shared/services/topping.service";
 import {Sauce} from "../shared/models/sauce";
 import {Topping} from "../shared/models/topping";
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {PizzaService} from "../shared/services/pizza.service";
+import {Pizza} from "../shared/models/pizza";
 
 @Component({
   selector: 'app-form-pizza',
@@ -23,9 +25,13 @@ export class FormPizzaComponent implements OnInit {
     private crustService : CrustService,
     private sauceService : SauceService,
     private toppingService : ToppingService,
+    private pizzaService : PizzaService,
     private formBuilder: FormBuilder ) {
     this.createPizzaForm = this.formBuilder.group({
-      name: ['(nom de la pizza)', Validators.required]
+      name: ['(nom de la pizza)', Validators.required],
+      crust: ['', Validators.required],
+      sauce: ['', Validators.required],
+      toppings: [[''], Validators.required],
     });
   }
 
@@ -81,7 +87,16 @@ export class FormPizzaComponent implements OnInit {
     this.createPizzaForm.reset();
   }
 
-
-
-
+  validatePizza() {
+    console.log("> FormPizza component : validatePizza() [" + this.createPizzaForm.controls['name'].value + "]");
+    let createdPizza = new Pizza(
+      this.createPizzaForm.controls['name'].value,
+      this.createPizzaForm.controls['toppings'].value,
+      this.createPizzaForm.controls['crust'].value,
+      this.createPizzaForm.controls['sauce'].value
+    );
+    console.log(createdPizza);
+    this.pizzaService.addPizza(createdPizza).subscribe();
+    this.createPizzaForm.reset();
+  }
 }
