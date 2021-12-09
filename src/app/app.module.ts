@@ -9,12 +9,18 @@ import { FormPizzaComponent } from './form-pizza/form-pizza.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
+import { ContactComponent } from './contact/contact.component';
+import { RestaurantComponent } from './restaurant/restaurant.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FormPizzaComponent,
-    HomeComponent
+    HomeComponent,
+    ContactComponent,
+    RestaurantComponent
   ],
   imports: [
     BrowserModule,
