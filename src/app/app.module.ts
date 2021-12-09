@@ -11,6 +11,7 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 import { ContactComponent } from './contact/contact.component';
 import { RestaurantComponent } from './restaurant/restaurant.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { RestaurantComponent } from './restaurant/restaurant.component';
     FormPizzaComponent,
     HomeComponent,
     ContactComponent,
-    RestaurantComponent
+    RestaurantComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

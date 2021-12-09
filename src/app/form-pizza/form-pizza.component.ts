@@ -90,6 +90,7 @@ export class FormPizzaComponent implements OnInit {
 
   calculatePrice() {
     console.log("> FormPizza component : calculatePrice()");
+    this.price = 0;
     if (this.createPizzaForm.controls['sauce'].value.name === "Crème") {
       this.price += 6;
     } else if (this.createPizzaForm.controls['sauce'].value.name === "Tomate") {
