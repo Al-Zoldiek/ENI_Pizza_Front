@@ -38,9 +38,11 @@
   border-color: #C21515;
 }
 
-.titre-page {
+.titre-page>p {
   margin: 1%;
   font-weight: bold;
   font-size: larger;
   color: #B82D2A;
 }
+
+.titre-page>button{margin: 1%;}

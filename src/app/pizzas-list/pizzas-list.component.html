@@ -1,5 +1,10 @@
 <div class="list-container">
-  <p class="titre-page">Liste des pizzas complète :</p>
+  <div class="row titre-page">
+  <p class="titre-page three columns">Liste des pizzas complète :</p>
+    <button (click)="sortPizzas('Végétariennes')" class="button-primary two columns  offset-by-one">Les végétariennes</button>
+    <button (click)="sortPizzas('Vegan')" class="button-primary two columns offset-by-one">Les veganes</button>
+    <button (click)="sortPizzas('Toutes')" class="button-primary two columns">Toutes nos pizzas</button>
+  </div>
   <ul>
 
     <div class="pizza-container" *ngFor="let pizza of pizzasSorted">
@@ -27,8 +32,4 @@
 </div>
 
 
-<button (click)="getAllPizzas()">getAllPizzas()</button>
-<button (click)="getPizzaById(1)">getPizzaById(1)</button>
-<button (click)="sortPizzas('Végétariennes')">Les végétariennes</button>
-<button (click)="sortPizzas('Vegan')">Les veganes</button>
-<button (click)="sortPizzas('Toutes')">Toutes nos pizzas</button>
+
