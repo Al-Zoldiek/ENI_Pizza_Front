@@ -4,12 +4,14 @@ import {FormPizzaComponent} from "./form-pizza/form-pizza.component";
 import {HomeComponent} from "./home/home.component";
 import {ContactComponent} from "./contact/contact.component";
 import {RestaurantComponent} from "./restaurant/restaurant.component";
+import {PizzasListComponent} from "./pizzas-list/pizzas-list.component";
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'form-pizza', component: FormPizzaComponent},
   {path: 'contact', component: ContactComponent},
   {path: 'restaurant', component: RestaurantComponent},
+  {path: 'liste-pizzas', component: PizzasListComponent},
   {path: '**', redirectTo: ''}
 ];
 
