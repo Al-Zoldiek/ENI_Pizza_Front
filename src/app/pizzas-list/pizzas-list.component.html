@@ -19,9 +19,11 @@
 
         <div class="five columns">
           <ol>Pâte {{pizza.crust.name}}, base {{pizza.sauce.name}}</ol>
-          <ol><span *ngFor="let topping of pizza.toppingsList">
-            {{topping.name}},
-          </span>
+          <ol>
+            <span *ngFor="let topping of pizza.toppingsList; let index = index">
+                {{topping.name}}
+              <span *ngIf="index < pizza.toppingsList.length-1">,</span>
+            </span>
           </ol>
         </div>
       </div>
