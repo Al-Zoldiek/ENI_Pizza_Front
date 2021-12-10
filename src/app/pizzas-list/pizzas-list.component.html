@@ -1,14 +1,28 @@
-<div>
-  <p>Liste des pizzas complète :</p>
+<div class="list-container">
+  <p class="titre-page">Liste des pizzas complète :</p>
   <ul>
-    <li *ngFor="let pizza of pizzasSorted">
-        <p>{{pizza.name}}</p>
-        <ol>Pâte {{pizza.crust.name}}</ol>
-        <ol>Base {{pizza.sauce.name}}</ol>
-        <div *ngFor="let topping of pizza.toppingsList">
-          <ol>{{topping.name}} ({{topping.category}})</ol>
+
+    <div class="pizza-container" *ngFor="let pizza of pizzasSorted">
+      <p class="row pizza-container-name offset-by-one eleven columns">{{pizza.name}}</p>
+      <div clas="row">
+        <div class="row five columns offset-by-one">
+          <img src="../../assets/img/Pizzas/{{pizza.id}}.jpg" class="five columns pizza-img">
+          <button class="button-primary"> Ajouter au panier </button>
         </div>
-    </li>
+
+        <div class="five columns">
+          <ol>Pâte {{pizza.crust.name}}, base {{pizza.sauce.name}}</ol>
+          <ol><span *ngFor="let topping of pizza.toppingsList">
+            {{topping.name}},
+          </span>
+          </ol>
+        </div>
+
+
+      </div>
+
+    </div>
+
   </ul>
 </div>
 
