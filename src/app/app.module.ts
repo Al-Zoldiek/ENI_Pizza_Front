@@ -13,6 +13,8 @@ import { PizzasListComponent } from './pizzas-list/pizzas-list.component';
 import { ContactComponent } from './contact/contact.component';
 import { RestaurantComponent } from './restaurant/restaurant.component';
 import { FooterComponent } from './footer/footer.component';
+import { OrdersComponent } from './orders/orders.component';
+import { MonCompteComponent } from './mon-compte/mon-compte.component';
 
 
 @NgModule({
@@ -24,7 +26,9 @@ import { FooterComponent } from './footer/footer.component';
     PizzasListComponent,
     ContactComponent,
     RestaurantComponent,
-    FooterComponent
+    FooterComponent,
+    OrdersComponent,
+    MonCompteComponent
   ],
   imports: [
     BrowserModule,
