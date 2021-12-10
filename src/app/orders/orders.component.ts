@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {Order} from "../shared/models/order";
 import {OrderService} from "../shared/services/order.service";
+import {PizzaService} from "../shared/services/pizza.service";
+import {Pizza} from "../shared/models/pizza";
 
 @Component({
   selector: 'app-orders',
@@ -9,8 +11,9 @@ import {OrderService} from "../shared/services/order.service";
 })
 export class OrdersComponent implements OnInit {
   public orders: Order[] = [];
+  public pizzas: Pizza[] = [];
 
-  constructor(private orderServ: OrderService) {
+  constructor(private orderServ: OrderService, private pizzaServ: PizzaService) {
   }
 
   ngOnInit(): void {
@@ -19,7 +22,6 @@ export class OrdersComponent implements OnInit {
 
   //recupère la liste des commandes
   getAllOrders(){
-    console.log('passage dans orders.component getAllOrders');
     this.orderServ.getOrders().subscribe(
       (data: any) => {
         // Lorsque l'API a répondu correctement.
@@ -31,6 +33,7 @@ export class OrdersComponent implements OnInit {
       }
     );
   }
+
 
 
 }
