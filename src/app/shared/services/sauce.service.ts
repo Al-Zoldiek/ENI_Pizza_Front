@@ -9,7 +9,7 @@ export class SauceService {
   constructor(private http: HttpClient) { }
 
   getSauce(sauceId: bigint){
-    console.log(' > Sauce service : getSauce()');
+    console.log(' > Sauce service : getSauce('+ sauceId +')');
     return this.http.get('http://localhost:8080/sauce/'+sauceId);
   }
 

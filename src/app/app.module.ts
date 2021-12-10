@@ -8,6 +8,7 @@ import { HeaderComponent } from './header/header.component';
 import { FormPizzaComponent } from './form-pizza/form-pizza.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { PizzasListComponent } from './pizzas-list/pizzas-list.component';
 
 import { ContactComponent } from './contact/contact.component';
 import { RestaurantComponent } from './restaurant/restaurant.component';
@@ -21,6 +22,7 @@ import { MonCompteComponent } from './mon-compte/mon-compte.component';
     HeaderComponent,
     FormPizzaComponent,
     HomeComponent,
+    PizzasListComponent,
     ContactComponent,
     RestaurantComponent,
     OrdersComponent,
