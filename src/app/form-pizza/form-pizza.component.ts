@@ -94,7 +94,7 @@ export class FormPizzaComponent implements OnInit {
     if (this.createPizzaForm.controls['sauce'].value.name === "Crème") {
       this.price += 6;
     } else if (this.createPizzaForm.controls['sauce'].value.name === "Tomate") {
-      this.price += 56;
+      this.price += 5;
     }
     let size = this.createPizzaForm.controls['toppings'].value.length;
     if (size > 3) {
