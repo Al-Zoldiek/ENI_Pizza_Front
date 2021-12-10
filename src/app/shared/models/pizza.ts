@@ -9,7 +9,8 @@ export class Pizza {
   public crust: Crust;
   public sauce: Sauce;
 
-  constructor( name: string, toppingsList: Topping[], crust: Crust, sauce: Sauce) {
+  constructor(name: string, toppingsList: Topping[], crust: Crust, sauce: Sauce) {
+
     this.name = name;
     this.toppingsList = toppingsList;
     this.crust = crust;

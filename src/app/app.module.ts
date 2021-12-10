@@ -10,13 +10,19 @@ import { HomeComponent } from './home/home.component';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { PizzasListComponent } from './pizzas-list/pizzas-list.component';
 
+import { ContactComponent } from './contact/contact.component';
+import { RestaurantComponent } from './restaurant/restaurant.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FormPizzaComponent,
     HomeComponent,
-    PizzasListComponent
+    PizzasListComponent,
+    ContactComponent,
+    RestaurantComponent
   ],
   imports: [
     BrowserModule,

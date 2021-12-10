@@ -1,38 +1,60 @@
 <!--<p>form-pizza works!</p>-->
-<h2>Votre pizza</h2>
-<form [formGroup]="createPizzaForm">
-  <div>
-    <label for="name">Nom de la pizza : </label>
-    <input type="text" formControlName="name" id="name" name="name">
-  </div>
-  <div>
-    <label for="crust-selection">Type de pâte :</label>
-    <select name="crust" id="crust-selection">
-      <option value="">-- Liste des pâtes --</option>
-      <option *ngFor="let crust of crustArray" [value]="crust.id">
-        {{crust.name}}
-      </option>
-    </select>
-    <label for="sauce-selection">Type de base :</label>
-    <select name="sauce" id="sauce-selection">
-      <option value="">-- Liste des bases --</option>
-      <option *ngFor="let sauce of sauceArray" [value]="sauce.id">
-        {{sauce.name}}
-      </option>
-    </select>
-  </div>
-  <div>
-    <label for="topping-selection">Ingredients :</label>
-    <select name="toppings" id="topping-selection" multiple>
-      <option *ngFor="let topping of toppingArray" [value]="topping.id">
-        {{topping.name}} ({{topping.category}})
-      </option>
-    </select>
-  </div>
-  <div>
-    <button>Calcul du prix</button>
-    <button>Valider la commande</button>
-  </div>
 
+<div class="container">
 
-</form>
+  <h2>Votre pizza</h2>
+
+  <form [formGroup]="createPizzaForm">
+
+    <div>
+      <label for="name">Nom de la pizza : </label>
+      <input class= "u-full-width" type="text" formControlName="name" id="name" name="name">
+    </div>
+
+    <div class="row">
+
+      <div class="six columns">
+        <label for="crust-selection">Type de pâte :</label>
+        <select class= "u-full-width" formControlName="crust" id="crust-selection" name="crust" >
+          <option value="">-- Liste des pâtes --</option>
+          <option *ngFor="let crust of crustArray" [ngValue]="crust">
+            {{crust.name}}
+          </option>
+        </select>
+      </div>
+
+      <div class="six columns">
+        <label for="sauce-selection">Type de base :</label>
+        <select class= "u-full-width" formControlName="sauce" id="sauce-selection" name="sauce" >
+          <option value="">-- Liste des bases --</option>
+          <option *ngFor="let sauce of sauceArray" [ngValue]="sauce">
+            {{sauce.name}}
+          </option>
+        </select>
+      </div>
+
+    </div>
+
+    <div class="row">
+
+      <label for="topping-selection">Ingredients :</label>
+      <select class= "u-full-width" formControlName="toppings" id="topping-selection" name="toppings" multiple>
+        <option *ngFor="let topping of toppingArray" [ngValue]="topping">
+          {{topping.name}} ({{topping.category}})
+        </option>
+      </select>
+
+    </div>
+
+    <div class="row">
+      <div>
+        <button class="">Calcul du prix</button>
+      </div>
+      
+      <div>
+        <button class="button-primary" (click)="validatePizza()">Valider la commande</button>
+      </div>
+    </div>
+  </form>
+</div>
+

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
+import {Pizza} from "../models/pizza";
 
 @Injectable({
   providedIn: 'root'
@@ -17,4 +18,10 @@ export class PizzaService {
     console.log(' > PizzaService : getPizzas()');
     return this.http.get('http://localhost:8080/pizzas');
   }
+
+  addPizza(pizzaToAdd: Pizza){
+    console.log(' > Pizza service : addPizza()');
+    return this.http.post('http://localhost:8080/create-pizza', pizzaToAdd);
+  }
+
 }
