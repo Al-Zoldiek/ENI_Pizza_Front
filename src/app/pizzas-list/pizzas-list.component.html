@@ -1,17 +1,19 @@
 <div class="list-container">
-  <div class="row titre-page">
-  <p class="titre-page three columns">Liste des pizzas complète :</p>
+  <div class="row page-menu">
+    <p class="titre-page three columns">Liste des pizzas complète :</p>
     <button (click)="sortPizzas('Végétariennes')" class="button-primary two columns  offset-by-one">Les végétariennes</button>
     <button (click)="sortPizzas('Vegan')" class="button-primary two columns offset-by-one">Les veganes</button>
     <button (click)="sortPizzas('Toutes')" class="button-primary two columns">Toutes nos pizzas</button>
   </div>
   <ul>
-
     <div class="pizza-container" *ngFor="let pizza of pizzasSorted">
       <p class="row pizza-container-name offset-by-one eleven columns">{{pizza.name}}</p>
       <div clas="row">
         <div class="row five columns offset-by-one">
           <img src="../../assets/img/Pizzas/{{pizza.id}}.jpg" class="five columns pizza-img">
+          <div class="pizza-price">
+            {{calculatePrice(pizza)}}€
+          </div>
           <button class="button-primary"> Ajouter au panier </button>
         </div>
 
@@ -22,12 +24,8 @@
           </span>
           </ol>
         </div>
-
-
       </div>
-
     </div>
-
   </ul>
 </div>
 

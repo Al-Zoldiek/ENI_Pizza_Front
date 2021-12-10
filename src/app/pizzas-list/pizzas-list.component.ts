@@ -97,5 +97,21 @@ export class PizzasListComponent implements OnInit {
       this.pizzasSorted = [...this.pizzaList];
     }
   }
+
+  calculatePrice(pizza : Pizza) {
+    console.log("> FormPizza component : calculatePrice()");
+    let price = 0;
+    pizza.sauce.name ==='Crème'? price += 6 : price +=5;
+
+    let listLength = pizza.toppingsList.length;
+    // let size = this.createPizzaForm.controls['toppings'].value.length;
+    price += listLength*1;
+    /*if (listLength > 3) {
+      this.price += listLength*1;
+    } else {
+      this.price += 3;
+    }*/
+    return price;
+  }
 }
 

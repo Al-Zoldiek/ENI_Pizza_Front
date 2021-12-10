@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@700&family=Righteous&display=swap');
+
 .list-container {
 
   border-width: 0.5em;
@@ -10,39 +12,53 @@
 
 .pizza-container {
 
-  border-width: 2px;
-  border-color: #B82D2A;
-  border-style: outset;
+  border-width: 1em;
+  border-color: #B39782;
+  border-style: solid;
+  border-radius: 1em;
   height: 25em;
-  width: 31%;
+  width: 29%;
   margin-left: 1%;
   margin-right: 1%;
   margin-bottom: 1%;
   display: inline-block;
+  background-color: #315850;
+  color:white;
 }
 
 .pizza-container-name {
   padding-top: 1em;
   font-weight: bold;
   font-size: large;
-  color: #B82D2A;
+  color: #F5DB9F;
+  font-family: 'Fuzzy Bubbles', cursive;
+}
 
+.pizza-price {
+  font-weight: bold;
+  font-size: large;
+  color: #F5DB9F;
+  font-family: 'Fuzzy Bubbles', cursive;
+  text-align: center;
+  margin-bottom: 0.5em;
 }
 
 .pizza-img {
   width:13em;
   margin-top: 1.5em;
-  margin-bottom: 3em;
+  margin-bottom: 2em;
   border-width: 2px;
   border-style: outset;
-  border-color: #C21515;
+  border-color: #EBDAC3;
 }
 
-.titre-page>p {
+.page-menu>p {
   margin: 1%;
   font-weight: bold;
   font-size: larger;
   color: #B82D2A;
 }
 
-.titre-page>button{margin: 1%;}
+.page-menu>button{margin: 1%;}
+
+
