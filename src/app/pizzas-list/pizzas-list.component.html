@@ -1,1 +1,20 @@
-<p>pizzas-list works!</p>
+<div>
+  <p>Liste des pizzas complète :</p>
+  <ul>
+    <li *ngFor="let pizza of pizzasSorted">
+        <p>{{pizza.name}}</p>
+        <ol>Pâte {{pizza.crust.name}}</ol>
+        <ol>Base {{pizza.sauce.name}}</ol>
+        <div *ngFor="let topping of pizza.toppingsList">
+          <ol>{{topping.name}} ({{topping.category}})</ol>
+        </div>
+    </li>
+  </ul>
+</div>
+
+
+<button (click)="getAllPizzas()">getAllPizzas()</button>
+<button (click)="getPizzaById(1)">getPizzaById(1)</button>
+<button (click)="sortPizzas('Végétariennes')">Les végétariennes</button>
+<button (click)="sortPizzas('Vegan')">Les veganes</button>
+<button (click)="sortPizzas('Toutes')">Toutes nos pizzas</button>

@@ -16,6 +16,5 @@ export class PizzaService {
   getPizzas(){
     console.log(' > PizzaService : getPizzas()');
     return this.http.get('http://localhost:8080/pizzas');
-
   }
 }

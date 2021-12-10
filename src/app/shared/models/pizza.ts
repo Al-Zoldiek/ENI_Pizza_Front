@@ -3,16 +3,15 @@ import {Sauce} from "./sauce";
 import {Topping} from "./topping";
 
 export class Pizza {
-  public id: number;
+  public id!: number;
   public name: string = "";
-  public toppingArray: Topping[];
+  public toppingsList: Topping[];
   public crust: Crust;
   public sauce: Sauce;
 
-  constructor(id: number, name: string, toppingArray: Topping[], crust: Crust, sauce: Sauce) {
-    this.id = id;
+  constructor( name: string, toppingsList: Topping[], crust: Crust, sauce: Sauce) {
     this.name = name;
-    this.toppingArray = toppingArray;
+    this.toppingsList = toppingsList;
     this.crust = crust;
     this.sauce = sauce;
   }
