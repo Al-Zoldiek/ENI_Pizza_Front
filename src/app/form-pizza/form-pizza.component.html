@@ -3,19 +3,20 @@
 <div class="container">
 
   <h2>Votre pizza</h2>
+  <p>Concoctez votre propre recette</p>
 
   <form [formGroup]="createPizzaForm">
 
     <div>
       <label for="name">Nom de la pizza : </label>
-      <input class= "u-full-width" type="text" formControlName="name" id="name" name="name">
+      <input class= "u-full-width" type="text" formControlName="name" id="name" name="name" required>
     </div>
 
     <div class="row">
 
       <div class="six columns">
         <label for="crust-selection">Type de pâte :</label>
-        <select class= "u-full-width" formControlName="crust" id="crust-selection" name="crust" >
+        <select class= "u-full-width" formControlName="crust" id="crust-selection" name="crust" required>
           <option value="">-- Liste des pâtes --</option>
           <option *ngFor="let crust of crustArray" [ngValue]="crust">
             {{crust.name}}
@@ -25,7 +26,7 @@
 
       <div class="six columns">
         <label for="sauce-selection">Type de base :</label>
-        <select class= "u-full-width" formControlName="sauce" id="sauce-selection" name="sauce" >
+        <select class= "u-full-width" formControlName="sauce" id="sauce-selection" name="sauce" required>
           <option value="">-- Liste des bases --</option>
           <option *ngFor="let sauce of sauceArray" [ngValue]="sauce">
             {{sauce.name}}
@@ -38,7 +39,7 @@
     <div class="row">
 
       <label for="topping-selection">Ingredients :</label>
-      <select class= "u-full-width" formControlName="toppings" id="topping-selection" name="toppings" multiple>
+      <select class= "u-full-width" formControlName="toppings" id="topping-selection" name="toppings" multiple required>
         <option *ngFor="let topping of toppingArray" [ngValue]="topping">
           {{topping.name}} ({{topping.category}})
         </option>
@@ -47,14 +48,18 @@
     </div>
 
     <div class="row">
-      <div>
-        <button class="">Calcul du prix</button>
+      <div class="six columns">
+        <button class="" (click)="calculatePrice()">Calculer le prix</button>
       </div>
-      
-      <div>
-        <button class="button-primary" (click)="validatePizza()">Valider la commande</button>
+      <div class="price six columns">
+        {{price}} euros
       </div>
     </div>
+
+    <div class="button-valid">
+      <button class="button-primary" (click)="validatePizza()">Créer la pizza</button>
+    </div>
+
   </form>
 </div>
 

@@ -1,41 +1,61 @@
-<h2>Contact</h2>
+<div class="container">
+  <h2>Contact</h2>
+  <p>Nous contacter</p>
+  <article>
+    <form>
+      <div class="row">
+        <div class="six columns">
+          <label for="firstname">Prénom : </label>
+          <input class="u-full-width" type="text" placeholder="Prénom*" id="firstname" name="firstname" required>
+        </div>
+        <div class="six columns">
+          <label for="firstname">Nom : </label>
+          <input class="u-full-width" type="text" placeholder="Nom*" id="lastname" name="lastname" required>
+        </div>
+      </div>
 
-<article>
-<form>
-<p>Nous contacter</p>
+      <div class="row">
+        <div class="six columns">
+          <label for="firstname">Courriel : </label>
+          <input class="u-full-width" type="text" placeholder="Email*" id="email" name="email" required>
+        </div>
+        <div class="six columns">
+          <label for="phonenumber">Numéro de téléphone : </label>
+          <input class="u-full-width" type="text" placeholder="Téléphone*" id="phonenumber" name="phonenumber" required>
+        </div>
+      </div>
+
+      <div class="u-full-width">
+          <label for="message">Message : </label>
+          <input class="message" type="textarea" placeholder="Message*" id="message" name="message" required>
+      </div>
+
+      <div class="row">
+        <div class="one column">
+          <input  type="checkbox" id="check-non-robot" required>
+        </div>
+        <div class="eleven columns">
+          <label for="check-non-robot">Je ne suis pas un robot</label>
+        </div>
+      </div>
+
+      <div>
+        <button class="button">Annuler</button>
+        <button class="button-primary">Envoyer</button>
+      </div>
+
+    </form>
+  </article>
+
   <div>
-    <table>
-      <tr>
-        <td><input type="text" placeholder="Nom*" required></td>
-        <td><input type="text" placeholder="Prénom*" required></td>
-      </tr>
-      <tr>
-        <th><input type="email" placeholder="Email*" required></th>
-        <th><input type="text" placeholder="Téléphone*" required></th>
-        <th></th>
-      </tr>
-    </table>
-
-    <p><textarea placeholder="Message*" required></textarea></p>
-
-  <div>
-      <label for="check-non-robot">Je ne suis pas un robot</label>
-      <input type="checkbox" id="check-non-robot" required>
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+    when an unknown printer took a galley of type and scrambled it to make a type
+    specimen book. It has survived not only five centuries, but also the leap into
+    electronic typesetting, remaining essentially unchanged. It was popularised
+    in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+    and more recently with desktop publishing software like Aldus PageMaker including
+    versions of Lorem Ipsum.
   </div>
 
-    <input type="submit" value="Annuler">
-    <input type="submit" value="Envoyer">
-  </div>
-</form>
-</article>
-
-<div><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-  when an unknown printer took a galley of type and scrambled it to make a type
-  specimen book. It has survived not only five centuries, but also the leap into
-  electronic typesetting, remaining essentially unchanged. It was popularised
-  in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-  and more recently with desktop publishing software like Aldus PageMaker including
-  versions of Lorem Ipsum.</p></div>
-
-<footer><a>Mentions Legales</a> | <a>Conditions générales de ventes</a></footer>
+</div>

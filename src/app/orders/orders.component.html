@@ -1,0 +1,9 @@
+<div class="container">
+  <h2>Commandes</h2>
+  <div id="divOrder" *ngFor="let order of orders">
+    <h5>Votre commande n°{{order.id}} du {{order.date | date: 'dd/MM/yyyy'}} à {{order.date | date: 'HH'}} h {{order.date | date: 'mm'}} </h5>
+    <p>Statut : {{order.status}}</p>
+  </div>
+</div>
+
+
